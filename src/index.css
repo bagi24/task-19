@@ -212,8 +212,8 @@ hr {
   box-shadow: 0 0 0 0.2em hsl(var(--bg)), 0 0 0 0.4em hsl(var(--accent) / 0.8);
 }
 
-.input:focus~.label,
-.input:not(:placeholder-shown)~.label {
+.input:focus ~ .label,
+.input:not(:placeholder-shown) ~ .label {
   transform: translate3d(0, -3em, 0);
   background-color: hsl(var(--bg));
   color: hsl(var(--accent) / 0.8);
@@ -240,4 +240,46 @@ hr {
   border-radius: var(--_radius);
   border: 0.1em solid hsl(var(--accent) / 0.3);
   box-shadow: 0 -1em 3em hsl(var(--muted)), 0 1em 3em hsl(var(--accent) / 0.2);
+}
+
+.header {
+  background-color: #f5f5f5;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.language-buttons {
+  display: flex;
+}
+
+.language-button {
+  padding: 8px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+  background-color: transparent;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+.language-button.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.language-button:hover {
+  background-color: #eee;
+}
+
+.some-component {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 18px;
+  color: #333;
 }
